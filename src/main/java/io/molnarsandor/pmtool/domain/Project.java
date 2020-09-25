@@ -14,11 +14,11 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "Project name is required")
-    private String ProjectName;
+    private String projectName;
     @NotBlank(message = "Project Identifier is required")
     @Size(min = 4, max = 6, message = "Please use 4 to 6 characters")
     @Column(updatable = false, unique = true)
-    private String ProjectIdentifier;
+    private String projectIdentifier;
     @NotBlank(message = "Project description is required")
     private String description;
     @JsonFormat(pattern = "yyyy-mm-dd")
@@ -42,19 +42,19 @@ public class Project {
     }
 
     public String getProjectName() {
-        return ProjectName;
+        return projectName;
     }
 
     public void setProjectName(String projectName) {
-        ProjectName = projectName;
+        this.projectName = projectName;
     }
 
     public String getProjectIdentifier() {
-        return ProjectIdentifier;
+        return projectIdentifier;
     }
 
     public void setProjectIdentifier(String projectIdentifier) {
-        ProjectIdentifier = projectIdentifier;
+        this.projectIdentifier = projectIdentifier;
     }
 
     public String getDescription() {

@@ -45,7 +45,8 @@ public class User implements UserDetails {
     @PrePersist
     protected void onCreate() { this.created_At = new Date(); }
 
-    @PreUpdate void onUpdate() { this.updated_At = new Date(); }
+    @PreUpdate
+    protected void onUpdate() { this.updated_At = new Date(); }
 
     /*
     UserDetails interface methods
